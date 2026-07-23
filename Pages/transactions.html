@@ -1,16 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transactions</title>
+    <title>Todas las Transacciones</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Transactions</h1>
-    <ul>
-        <li><a href="../Pages/deposit.html">Deposit</a></li>
-        <li><a href="../Pages/sendmoney.html">Send Money</a></li>
-        
-    </ul>
+
+<body class="bg-light">
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+
+            <a class="navbar-brand" href="menu.html">
+                Alke Wallet
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="deposit.html">Depositar</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sendmoney.html">Enviar Dinero</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="transactions.html">
+                            Movimientos
+                        </a>
+                    </li>
+
+                </ul>
+
+                <span
+                    id="navbarBalance"
+                    class="text-white fw-bold">
+                </span>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Contenido -->
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-8 col-lg-7">
+
+                <div class="card shadow">
+
+                    <div class="card-body">
+
+                        <h3 class="text-center mb-4">
+                            Todas las Transacciones
+                        </h3>
+
+                        <div
+                            id="allTransactions"
+                            class="form-control"
+                            style="min-height:400px; overflow-y:auto;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../JS/transactions.js"></script>
+
 </body>
 </html>

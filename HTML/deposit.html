@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todas las Transacciones</title>
+
+    <title>Depositar</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-light">
 
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+
         <div class="container">
 
             <a class="navbar-brand" href="menu.html">
@@ -33,19 +38,25 @@
                 <ul class="navbar-nav me-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Inicio</a>
+                        <a class="nav-link" href="menu.html">
+                            Inicio
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="deposit.html">Depositar</a>
+                        <a class="nav-link active" href="deposit.html">
+                            Depositar
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="sendmoney.html">Enviar Dinero</a>
+                        <a class="nav-link" href="sendmoney.html">
+                            Enviar Dinero
+                        </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="transactions.html">
+                        <a class="nav-link" href="transactions.html">
                             Movimientos
                         </a>
                     </li>
@@ -60,6 +71,7 @@
             </div>
 
         </div>
+
     </nav>
 
     <!-- Contenido -->
@@ -68,21 +80,53 @@
 
         <div class="row justify-content-center">
 
-            <div class="col-12 col-md-8 col-lg-7">
+            <div class="col-12 col-md-6 col-lg-5">
 
                 <div class="card shadow">
 
+                    <div class="card-header bg-primary text-white text-center">
+
+                        <h4 class="mb-0">
+                            Depositar Dinero
+                        </h4>
+
+                    </div>
+
                     <div class="card-body">
 
-                        <h3 class="text-center mb-4">
-                            Todas las Transacciones
-                        </h3>
+                        <form id="formulario">
 
-                        <div
-                            id="allTransactions"
-                            class="form-control"
-                            style="min-height:400px; overflow-y:auto;">
-                        </div>
+                            <div class="mb-3">
+
+                                <label
+                                    for="amount"
+                                    class="form-label">
+
+                                    Monto
+
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="amount"
+                                    name="amount"
+                                    min="1"
+                                    step="1"
+                                    class="form-control"
+                                    placeholder="Ingrese el monto">
+
+                            </div>
+
+                            <button
+                                id="btnDeposit"
+                                type="submit"
+                                class="btn btn-primary w-100">
+
+                                Depositar
+
+                            </button>
+
+                        </form>
 
                     </div>
 
@@ -98,7 +142,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../JS/transactions.js"></script>
+    <script src="../JS/deposit.js"></script>
 
 </body>
+
 </html>
